@@ -13,6 +13,7 @@ Simply include this somewhere in your app.js (or where it will be available to y
 
 <pre><code>
 Ti.include('helpers/tidata.js'); // Assuming you have it in /Resources/helpers/tidata.js
+
 </code></pre>
 
 <h2>Usage</h2>
@@ -25,12 +26,12 @@ Creates a new table as specified in the correct database and fires the callback 
 
 <pre><code>
 Data.createTable("my_database", "sample_data", {
-  id:
   name: "TEXT",
   title: "TEXT"
 }, function(){
   alert("Function complete!");
 });
+
 </code></pre>
 * Note here that the "id" field is created automatically and will autoincrement
 
@@ -42,6 +43,7 @@ Drops the table from the database (if it exists) and fires the callback
 Data.dropTable("my_database", "sample_data", function(){
   alert("Function complete!");
 });
+
 </code></pre>
 
 
@@ -56,6 +58,7 @@ Data.addToTable("my_database", "sample_data", {
   // e.added is a boolean stating whether this item was added or not
   alert("Item has been added: "+e.added);
 });
+
 </code></pre>
 
 
@@ -69,6 +72,7 @@ Data.updateRecord("my_database", "sample_data", {
 }, {
   id: 12345
 });
+
 </code></pre>
 
 
@@ -81,6 +85,7 @@ Data.getData("my_database", "sample_data", ["id", "name", "title"], {
     name: "example"
   }]
 });
+
 </code></pre>
 
 <h2>Known Issues and Future Improvements</h2>
@@ -92,6 +97,6 @@ Data.getData("my_database", "sample_data", ["id", "name", "title"], {
 
 <h2>Please let me know if you'd like any additions or something isn't working!</h2>
 
-<h2>License</h3>
+<h3>License</h3>
 Do whatever you want, however you want, whenever you want. And if you find a problem on your way, let me know so I can fix it for my own apps too :)
 
